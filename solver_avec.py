@@ -1,4 +1,4 @@
-# 2026年2月25日，修改代码，就是修改损失函数
+
 import os
 import time
 import numpy as np
@@ -46,11 +46,11 @@ class Solver(object):
         self.best_rmse = 1e9
         self.best_pearson = -1e9
 
-        # ✅ best history directory (lightweight)
+      
         self.best_dir = os.path.join(self.args.output_path, "best_history")
         os.makedirs(self.best_dir, exist_ok=True)
 
-        # ✅ keep last K best-history ckpts per metric (avoid disk explosion)
+ 
         self.keep_best_history = int(getattr(self.args, "keep_best_history", 10))
 
         if len(self.args.gpu_ids) > 0:
@@ -80,7 +80,7 @@ class Solver(object):
         self.sample_interval = int(getattr(self.args, "sample_interval", 3))
         self.train_num_segs = int(getattr(self.args, "train_num_segs", 1))
 
-        # ✅ val chunk size (avoid OOM)
+     
         self.val_chunk_size = int(getattr(self.args, "val_chunk_size", 4))
 
         use_aug = bool(getattr(self.args, "random_sample", False))
