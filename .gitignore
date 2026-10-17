@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Licensed data and derived participant artifacts
+data/
+datasets_raw/
+**/features/
+**/outputs/
+**/outputs_*/
+**/results/
+**/results_*/
+checkpoints/
+logs/
+wandb/
+label_dict.json
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npz
+*predictions*.csv
+*training_log*.csv
+
+# Local and temporary files
+*.log
+*.zip
+*.bak
+*.before_*
+diagnostic_memory_*/
+.DS_Store
